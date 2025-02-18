@@ -1,0 +1,28 @@
+resources:
+  - ../../base
+
+namePrefix: code-
+
+labels:
+  - pairs:
+      repo: code
+    includeSelectors: true
+
+configMapGenerators: # detect if config file, than add this
+- name: configmap
+  literals:
+    - key1=value1
+
+# patchesStrategicMerge:
+#   - |
+#     apiVersion: calico
+#     kine: NetworkPolicy
+#     metadata:
+#       name: np
+#     spec:
+#       selector: ...
+
+images:
+- name: nginx
+  newName: 
+  newTag: f4ae5a1
