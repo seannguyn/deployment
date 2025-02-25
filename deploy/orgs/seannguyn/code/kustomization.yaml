@@ -1,0 +1,19 @@
+resources:
+  - ../../../base
+
+namePrefix: code-
+
+labels:
+  - pairs:
+      repo: code
+    includeSelectors: true
+
+configMapGenerators: # detect if config file, than add this
+- name: configmap
+  literals:
+    - key1=value1
+
+images:
+- name: nginx
+  newName: wavingboat121/code
+  newTag: 98741157cec27e39690f21c3045ebf2c96c9ff0d
