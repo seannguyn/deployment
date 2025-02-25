@@ -8,7 +8,7 @@ labels:
       repo: ${REPO_NAME}
     includeSelectors: true
 
-configMapGenerators:
+configMapGenerator:
 - name: configmap
   literals:
     - ENV=TEST
