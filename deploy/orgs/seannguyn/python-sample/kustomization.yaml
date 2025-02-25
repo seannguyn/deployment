@@ -1,0 +1,19 @@
+resources:
+  - ../../../base
+
+namePrefix: python-sample-
+
+labels:
+  - pairs:
+      repo: python-sample
+    includeSelectors: true
+
+configMapGenerators: # detect if config file, than add this
+- name: configmap
+  literals:
+    - key1=value1
+
+images:
+- name: nginx
+  newName: wavingboat121/python-sample
+  newTag: cd66e70918e2138d34d536aca7107e66a3ddbb20
