@@ -1,0 +1,19 @@
+resources:
+  - ../../../base
+
+namePrefix: python-sample-
+
+labels:
+  - pairs:
+      repo: python-sample
+    includeSelectors: true
+
+configMapGenerators:
+- name: configmap
+  literals:
+    - ENV=TEST
+
+images:
+- name: nginx
+  newName: wavingboat121/python-sample
+  newTag: e4a14f27a53cad10b37b2f72df14ad7f39663044
