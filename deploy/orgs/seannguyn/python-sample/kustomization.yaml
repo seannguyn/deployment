@@ -16,4 +16,4 @@ configMapGenerator:
 images:
 - name: nginx
   newName: wavingboat121/python-sample
-  newTag: 896459c69c123ab872d167bd732ed9a3e7df3ce6
+  newTag: 71d436892dc87c3029f6164fe07bb4045d0d48d1
