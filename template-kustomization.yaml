@@ -1,5 +1,5 @@
 resources:
-  - ../../base
+  - ../../../base
 
 namePrefix: ${REPO_NAME}-
 
@@ -12,15 +12,6 @@ configMapGenerators: # detect if config file, than add this
 - name: configmap
   literals:
     - key1=value1
-
-# patchesStrategicMerge:
-#   - |
-#     apiVersion: calico
-#     kine: NetworkPolicy
-#     metadata:
-#       name: np
-#     spec:
-#       selector: ...
 
 images:
 - name: nginx

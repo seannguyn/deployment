@@ -1,0 +1,14 @@
+name: Deploy Using Shared Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    uses: seannguyn/actions/.github/workflows/PR-check.yaml@main
