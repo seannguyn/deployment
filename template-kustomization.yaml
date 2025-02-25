@@ -8,7 +8,7 @@ labels:
       repo: ${REPO_NAME}
     includeSelectors: true
 
-configMapGenerators: # detect if config file, than add this
+configMapGenerators:
 - name: configmap
   literals:
     - ENV=TEST
