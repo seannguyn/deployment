@@ -11,7 +11,7 @@ labels:
 configMapGenerators: # detect if config file, than add this
 - name: configmap
   literals:
-    - key1=value1
+    - ENV=TEST
 
 images:
 - name: nginx
