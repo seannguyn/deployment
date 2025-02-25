@@ -11,7 +11,7 @@ labels:
 configMapGenerator:
 - name: configmap
   literals:
-    - ENV=TEST
+    - ENV=STAGING
 
 images:
 - name: nginx
