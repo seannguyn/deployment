@@ -12,3 +12,8 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: serverless
+    # createNamespace: true
+  syncPolicy:
+    automated:
+      prune: true       # Delete old resources no longer in Git
+      selfHeal: true    # Restore changes if manually modified in the cluster
