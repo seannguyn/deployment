@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: app/v1
 kind: Deployment
 metadata:
   name: app
@@ -11,6 +11,7 @@ spec:
       maxUnavailable: 1
   template:
     spec:
+      serviceAccount: not-exist
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000
