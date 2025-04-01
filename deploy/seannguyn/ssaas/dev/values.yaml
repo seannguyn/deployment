@@ -1,0 +1,6 @@
+image:
+  repository: nginx
+  tag: "latest"
+
+tenant: ssaas
+environment: dev
