@@ -11,7 +11,7 @@ spec:
     path: charts/SSaaS
     helm:
       valueFiles:
-        - ../../deploy/seannguyn/ssaas/prod 
+        - ../../deploy/seannguyn/ssaas/prod/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: ssaas-prod
