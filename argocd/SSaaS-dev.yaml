@@ -1,0 +1,25 @@
+
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ssaas-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/seannguyn/deployment.git
+    targetRevision: HEAD
+    path: charts/SSaaS
+    helm:
+      valueFiles:
+        - ../../deploy/seannguyn/ssaas/dev 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ssaas-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
