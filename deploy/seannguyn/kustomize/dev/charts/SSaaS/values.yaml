@@ -1,0 +1,8 @@
+replicaCount: 1
+
+image:
+  repository: nginx  # Default image (overridden by tenant values)
+  tag: "latest"
+
+tenant: "default"
+environment: "dev"
