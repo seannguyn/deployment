@@ -5,8 +5,20 @@ kind: Kustomization
 helmCharts:
 - name: ssaas
   # repo: ./../../../../charts
-  chartHome: ./../../../../charts/ssaas  # Relative to the 'path' in Application
+  chartHome: ../../../../charts/ssaas  # Relative to the 'path' in Application
   version: 0.1.0
   releaseName: ssaas
   namespace: kustomize-dev
   valuesFile: values.yaml
+
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
+
+# helmCharts:
+# - name: ssaas
+#   repo: ""  # Leave empty if chart is in the same repo
+#   version: 0.1.0
+#   releaseName: ssaas
+#   namespace: kustomize-dev
+#   valuesFile: values.yaml
+#   chartHome: charts/ssaas  # Relative to the 'path' in Application
