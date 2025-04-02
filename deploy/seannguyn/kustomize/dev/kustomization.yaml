@@ -1,0 +1,11 @@
+# deploy/orgs/bob/kustomize/dev/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+- name: ssaas
+  repo: ./../../../../charts
+  version: 0.1.0
+  releaseName: ssaas
+  namespace: kustomize-dev
+  valuesFile: values.yaml

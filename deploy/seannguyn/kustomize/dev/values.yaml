@@ -1,0 +1,6 @@
+image:
+  repository: wavingboat121/ssaas
+  tag: 39596614e600044078ed290df675434652bbab45
+
+tenant: ssaas
+environment: dev
