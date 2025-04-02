@@ -4,7 +4,8 @@ kind: Kustomization
 
 helmCharts:
 - name: ssaas
-  repo: ./../../../../charts
+  # repo: ./../../../../charts
+  chartHome: ./../../../../charts/ssaas  # Relative to the 'path' in Application
   version: 0.1.0
   releaseName: ssaas
   namespace: kustomize-dev
